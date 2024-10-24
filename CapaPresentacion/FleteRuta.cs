@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Cliente : Form
+    public partial class FleteRuta : Form
     {
-        public Cliente()
+        public FleteRuta()
         {
             InitializeComponent();
             // Establece la posición inicial del formulario en el centro de la pantalla
@@ -25,33 +25,15 @@ namespace CapaPresentacion
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
-        private void btnAbrirClienteNuevo_Click(object sender, EventArgs e)
+        private void btnAbrirFleteRutaNuevo_Click(object sender, EventArgs e)
         {
-            ClienteNuevo ventanaCliente = new ClienteNuevo();
-            ventanaCliente.Show();
+            FleteRutaNuevo ventantaFleteRutaNuevo = new FleteRutaNuevo();
+            ventantaFleteRutaNuevo.Show();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Dispose();
-        }
-
-        private void btnAbrirClienteModificar_Click(object sender, EventArgs e)
-        {
-            ClienteModificar ventanaClienteModificar = new ClienteModificar();
-            ventanaClienteModificar.Show();
-        }
-
-        private void btnAbrirClienteInfo_Click(object sender, EventArgs e)
-        {
-            ClienteModificar ventanaClienteModificar = new ClienteModificar();
-            ventanaClienteModificar.Show();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            FleteRuta ventanaFleteRuta = new FleteRuta();
-            ventanaFleteRuta.Show();
         }
     }
 }
