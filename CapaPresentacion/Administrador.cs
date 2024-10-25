@@ -42,5 +42,17 @@ namespace CapaPresentacion
         {
             this.Dispose();
         }
+
+        private void choferesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegisterPersonal personal = new RegisterPersonal();
+            personal.Show();
+        }
+
+        private void vehiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegisterVehiculo vehiculo = new RegisterVehiculo();
+            vehiculo.Show();
+        }
     }
 }

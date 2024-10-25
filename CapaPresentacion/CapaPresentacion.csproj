@@ -58,6 +58,12 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Baja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baja.Designer.cs">
+      <DependentUpon>Baja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,12 @@
     <Compile Include="ClienteNuevo.Designer.cs">
       <DependentUpon>ClienteNuevo.cs</DependentUpon>
     </Compile>
+    <Compile Include="DocumentosPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocumentosPersonal.Designer.cs">
+      <DependentUpon>DocumentosPersonal.cs</DependentUpon>
+    </Compile>
     <Compile Include="FleteRuta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,13 +112,52 @@
     <Compile Include="FleteRutaVerificar.Designer.cs">
       <DependentUpon>FleteRutaVerificar.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistorialDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistorialDocumento.Designer.cs">
+      <DependentUpon>HistorialDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformacionVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformacionVehiculo.Designer.cs">
+      <DependentUpon>InformacionVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal.Designer.cs">
+      <DependentUpon>Personal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterPersonal.Designer.cs">
+      <DependentUpon>RegisterPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterVehiculo.Designer.cs">
+      <DependentUpon>RegisterVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehiculo.Designer.cs">
+      <DependentUpon>Vehiculo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccesoSistema.resx">
       <DependentUpon>AccesoSistema.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baja.resx">
+      <DependentUpon>Baja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
@@ -120,6 +171,9 @@
     <EmbeddedResource Include="ClienteNuevo.resx">
       <DependentUpon>ClienteNuevo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DocumentosPersonal.resx">
+      <DependentUpon>DocumentosPersonal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FleteRuta.resx">
       <DependentUpon>FleteRuta.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +182,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FleteRutaVerificar.resx">
       <DependentUpon>FleteRutaVerificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorialDocumento.resx">
+      <DependentUpon>HistorialDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformacionVehiculo.resx">
+      <DependentUpon>InformacionVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal.resx">
+      <DependentUpon>Personal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -138,6 +201,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegisterPersonal.resx">
+      <DependentUpon>RegisterPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterVehiculo.resx">
+      <DependentUpon>RegisterVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehiculo.resx">
+      <DependentUpon>Vehiculo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

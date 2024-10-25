@@ -28,10 +28,33 @@ namespace CapaPresentacion
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            Administrador ventanaAdministrador = new Administrador();
-            
-            ventanaAdministrador.Show();
-            this.Hide();
+            string username = textBox1.Text;
+            string password = textBox2.Text;
+
+            if (username == "Admin" && password == "123")
+            {
+                Administrador ventanaAdministrador = new Administrador();
+
+                ventanaAdministrador.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Datos incorrectos");
+            }
+
+           
+        }
+
+        private void AccesoSistema_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "Admin";
+            textBox2.Text = "123";
         }
     }
 }
