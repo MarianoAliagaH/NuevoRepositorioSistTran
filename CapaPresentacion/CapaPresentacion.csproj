@@ -94,6 +94,12 @@
     <Compile Include="DocumentosPersonal.Designer.cs">
       <DependentUpon>DocumentosPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturas.Designer.cs">
+      <DependentUpon>Facturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FleteRuta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DocumentosPersonal.resx">
       <DependentUpon>DocumentosPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturas.resx">
+      <DependentUpon>Facturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FleteRuta.resx">
       <DependentUpon>FleteRuta.cs</DependentUpon>
