@@ -1,9 +1,12 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaLogicaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,6 +31,66 @@ namespace CapaPresentacion
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+        public void LimpiarVariables()
+        {
+            txtNumeroDocumento.Text = "";
+            txtRazonSocial.Text = "";
+            cmbTipoPersona.SelectedIndex = 0;
+            txtDepartamento.Text = "";
+            txtProvincia.Text = "";
+            txtDistrito.Text = "";
+            txtDireccion.Text = "";
+            txtTelefono.Text = "";
+            txtCorreo.Text = "";
+            txtSitioWeb.Text = "";
+        }
+        private void btnInsertaCliente_Click(object sender, EventArgs e)
+        {
+            //Insertar
+            try
+            {
+                entCliente c = new entCliente();
+                c.numeroDocumento = txtNumeroDocumento.Text.Trim();
+                c.razonSocial = txtRazonSocial.Text.Trim();
+                if (cmbTipoPersona.SelectedIndex == 1)
+                {
+                    c.idTipoPersona = 1;
+                }
+                else if (cmbTipoPersona.SelectedIndex == 2)
+                {
+                    c.idTipoPersona = 2;
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione Tipo Persona");
+                }
+                
+                c.departamento = txtDepartamento.Text.Trim();
+                c.provincia = txtProvincia.Text.Trim();
+                c.distrito = txtDistrito.Text.Trim();
+                c.direccion = txtDireccion.Text.Trim();
+                c.telefono = txtTelefono.Text.Trim();
+                c.correo = txtCorreo.Text.Trim();
+                c.activo=cbActivo.Checked;
+                c.sitioWeb = txtSitioWeb.Text.Trim();
+                c.fechaRegistro = dtpFechaRegistro.Value;
+                logCliente.Instancia.InsertarCliente(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            //grupBoxDatos.Enabled = false;
+            //ListarCliente();
+
+        }
+
+        private void ClienteNuevo_Load(object sender, EventArgs e)
+        {
+            cbActivo.Checked = true;
+            cmbTipoPersona.SelectedIndex = 0;
         }
     }
 }
