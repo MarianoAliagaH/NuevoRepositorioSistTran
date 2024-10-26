@@ -58,6 +58,12 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="AtenderOrdenTrabajoAutorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AtenderOrdenTrabajoAutorizacion.Designer.cs">
+      <DependentUpon>AtenderOrdenTrabajoAutorizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Baja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,12 @@
     <Compile Include="InformacionVehiculo.Designer.cs">
       <DependentUpon>InformacionVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrdenTrabajoAutorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenTrabajoAutorizacion.Designer.cs">
+      <DependentUpon>OrdenTrabajoAutorizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AtenderOrdenTrabajoAutorizacion.resx">
+      <DependentUpon>AtenderOrdenTrabajoAutorizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Baja.resx">
       <DependentUpon>Baja.cs</DependentUpon>
@@ -197,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InformacionVehiculo.resx">
       <DependentUpon>InformacionVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenTrabajoAutorizacion.resx">
+      <DependentUpon>OrdenTrabajoAutorizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>

@@ -54,5 +54,11 @@ namespace CapaPresentacion
             RegisterVehiculo vehiculo = new RegisterVehiculo();
             vehiculo.Show();
         }
+
+        private void ordenesDeTrabajoParaAutorizacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrdenTrabajoAutorizacion OrdenAutorizacion = new OrdenTrabajoAutorizacion();
+            OrdenAutorizacion.Show();
+        }
     }
 }
