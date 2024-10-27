@@ -16,5 +16,10 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void pnllDatoCliente_Paint(object sender, PaintEventArgs e)
+        {
+          
+        }
     }
 }
