@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Procesamiento_de_Oordenes_de_Trabajo_por_Cliente : Form
+    public partial class ProcesamientodeOrdenesdeTrabajoporCliente : Form
     {
-        public Procesamiento_de_Oordenes_de_Trabajo_por_Cliente()
+        public ProcesamientodeOrdenesdeTrabajoporCliente()
         {
             InitializeComponent();
         }
