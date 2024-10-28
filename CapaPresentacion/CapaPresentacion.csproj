@@ -64,11 +64,29 @@
     <Compile Include="AtenderOrdenTrabajoAutorizacion.Designer.cs">
       <DependentUpon>AtenderOrdenTrabajoAutorizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="B.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B.Designer.cs">
+      <DependentUpon>B.cs</DependentUpon>
+    </Compile>
     <Compile Include="Baja.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Baja.Designer.cs">
       <DependentUpon>Baja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busca.Designer.cs">
+      <DependentUpon>Busca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
@@ -124,6 +142,12 @@
     <Compile Include="FleteRutaVerificar.Designer.cs">
       <DependentUpon>FleteRutaVerificar.cs</DependentUpon>
     </Compile>
+    <Compile Include="G.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G.Designer.cs">
+      <DependentUpon>G.cs</DependentUpon>
+    </Compile>
     <Compile Include="HistorialDocumento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +171,12 @@
     </Compile>
     <Compile Include="Personal.Designer.cs">
       <DependentUpon>Personal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesamiento de Oordenes de Trabajo por Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesamiento de Oordenes de Trabajo por Cliente.Designer.cs">
+      <DependentUpon>Procesamiento de Oordenes de Trabajo por Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -177,8 +207,17 @@
     <EmbeddedResource Include="AtenderOrdenTrabajoAutorizacion.resx">
       <DependentUpon>AtenderOrdenTrabajoAutorizacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="B.resx">
+      <DependentUpon>B.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Baja.resx">
       <DependentUpon>Baja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busca.resx">
+      <DependentUpon>Busca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
@@ -207,6 +246,9 @@
     <EmbeddedResource Include="FleteRutaVerificar.resx">
       <DependentUpon>FleteRutaVerificar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="G.resx">
+      <DependentUpon>G.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HistorialDocumento.resx">
       <DependentUpon>HistorialDocumento.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesamiento de Oordenes de Trabajo por Cliente.resx">
+      <DependentUpon>Procesamiento de Oordenes de Trabajo por Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
