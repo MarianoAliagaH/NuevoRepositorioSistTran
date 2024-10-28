@@ -160,6 +160,12 @@
     <Compile Include="InformacionVehiculo.Designer.cs">
       <DependentUpon>InformacionVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManCliente.Designer.cs">
+      <DependentUpon>ManCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrdenTrabajoAutorizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InformacionVehiculo.resx">
       <DependentUpon>InformacionVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManCliente.resx">
+      <DependentUpon>ManCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrdenTrabajoAutorizacion.resx">
       <DependentUpon>OrdenTrabajoAutorizacion.cs</DependentUpon>

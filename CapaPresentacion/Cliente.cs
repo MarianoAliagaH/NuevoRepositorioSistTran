@@ -14,64 +14,33 @@ namespace CapaPresentacion
 {
     public partial class Cliente : Form
     {
+        private int idClienteSeleccionado;
+
         public Cliente()
         {
             InitializeComponent();
             ListarCliente();
-            // Establece la posición inicial del formulario en el centro de la pantalla
             this.StartPosition = FormStartPosition.CenterScreen;
-
-            // Desactiva la capacidad de maximizar el formulario
             this.MaximizeBox = false;
-
-            // Establece el estilo del borde del formulario para que sea un cuadro de diálogo fijo
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
         public void ListarCliente()
         {
-            
-            dgvCliente.DataSource = logCliente.Instancia.ListarCliente();
-
-            lblTotalClientes.Text = $"Total de Clientes: {3}";
-            /*
-            // FiltrarColumnas
             var clientes = logCliente.Instancia.ListarCliente();
-            var clientesFiltrados = clientes.Select(c => new
-            {
-                IdCliente = c.idCliente,
-                NumeroDocumento = c.numeroDocumento,
-                TipoPersona = c.idTipoPersona, // Asumiendo que tienes una forma de convertir idTipoPersona a un nombre legible
-                RazonSocial = c.razonSocial,
-                DireccionCompleta = $"{c.direccion}, {c.distrito}, {c.provincia}, {c.departamento}"
-            }).ToList();
+            dgvCliente.DataSource = clientes;
+            lblTotalClientes.Text = $"Total de Clientes: {clientes.Count}";
+        }
 
-            dgvCliente.DataSource = clientesFiltrados;
-            
-            // Personalizar los encabezados de las columnas
-            dgvCliente.Columns["IdCliente"].HeaderText = "Codigo";
-            dgvCliente.Columns["NumeroDocumento"].HeaderText = "Nº de R.U.C.";
-            dgvCliente.Columns["TipoPersona"].HeaderText = "Tipo Persona";
-            dgvCliente.Columns["RazonSocial"].HeaderText = "Razón Social";
-            dgvCliente.Columns["DireccionCompleta"].HeaderText = "Domicilio Fiscal";
-
-            // Ajustar el ancho de las columnas
-            dgvCliente.Columns["IdCliente"].Width = 100;
-            dgvCliente.Columns["NumeroDocumento"].Width = 150; // Ancho en píxeles
-            dgvCliente.Columns["TipoPersona"].Width = 100;
-            dgvCliente.Columns["RazonSocial"].Width = 325;
-            dgvCliente.Columns["DireccionCompleta"].Width = 475;
-            // Centrar los títulos de las columnas
-            foreach (DataGridViewColumn column in dgvCliente.Columns)
-            {
-                column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            }
-            lblTotalClientes.Text = $"Total de Clientes: {clientes.Count}";*/
+        private void ClienteNuevo_ClienteAgregado(object sender, EventArgs e)
+        {
+            ListarCliente();
         }
 
         private void btnAbrirClienteNuevo_Click(object sender, EventArgs e)
         {
             ClienteNuevo ventanaCliente = new ClienteNuevo();
+            //ventanaCliente.ClienteAgregado += ClienteNuevo_ClienteAgregado;
             ventanaCliente.Show();
         }
 
@@ -80,22 +49,73 @@ namespace CapaPresentacion
             this.Dispose();
         }
 
-        private void btnAbrirClienteModificar_Click(object sender, EventArgs e)
+        private void ClienteInformacion_ClienteModificado(object sender, EventArgs e)
         {
-            ClienteModificar ventanaClienteModificar = new ClienteModificar();
-            ventanaClienteModificar.Show();
+            ListarCliente();
         }
 
         private void btnAbrirClienteInfo_Click(object sender, EventArgs e)
         {
-            ClienteModificar ventanaClienteModificar = new ClienteModificar();
-            ventanaClienteModificar.Show();
+            if (idClienteSeleccionado > 0)
+            {
+                ClienteInformacion ventanaClienteInfo = new ClienteInformacion(idClienteSeleccionado);
+                //ventanaClienteInfo.ClienteModificado += ClienteInformacion_ClienteModificado;
+                ventanaClienteInfo.Show();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un cliente primero.");
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            FleteRuta ventanaFleteRuta = new FleteRuta();
-            ventanaFleteRuta.Show();
+            if (idClienteSeleccionado > 0)
+            {
+                FleteRuta ventanaFleteRuta = new FleteRuta(idClienteSeleccionado);
+                ventanaFleteRuta.Show();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un cliente primero.");
+            }
+
+        }
+
+        private void btnDeshabilitaCliente_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entCliente c = new entCliente();
+                c.Id = idClienteSeleccionado;
+                logCliente.Instancia.DeshabilitarCliente(c);
+                ListarCliente();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void dgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow filaActual = dgvCliente.Rows[e.RowIndex];
+                    idClienteSeleccionado = Convert.ToInt32(filaActual.Cells[0].Value);
+                    Console.WriteLine("ID del Cliente seleccionado en MantenedorCliente: " + idClienteSeleccionado);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener el ID del cliente: " + ex.Message);
+            }
+        }
+        private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

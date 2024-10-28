@@ -15,6 +15,7 @@ namespace CapaPresentacion
 {
     public partial class ClienteNuevo : Form
     {
+        //public event EventHandler ClienteAgregado;
         public ClienteNuevo()
         {
             InitializeComponent();
@@ -50,6 +51,7 @@ namespace CapaPresentacion
             //Insertar
             try
             {
+                /*
                 entCliente c = new entCliente();
                 c.numeroDocumento = txtNumeroDocumento.Text.Trim();
                 c.razonSocial = txtRazonSocial.Text.Trim();
@@ -65,17 +67,20 @@ namespace CapaPresentacion
                 {
                     MessageBox.Show("Seleccione Tipo Persona");
                 }
-                
                 c.departamento = txtDepartamento.Text.Trim();
                 c.provincia = txtProvincia.Text.Trim();
                 c.distrito = txtDistrito.Text.Trim();
                 c.direccion = txtDireccion.Text.Trim();
                 c.telefono = txtTelefono.Text.Trim();
                 c.correo = txtCorreo.Text.Trim();
-                c.activo=cbActivo.Checked;
+                c.activo = cbActivo.Checked;
                 c.sitioWeb = txtSitioWeb.Text.Trim();
                 c.fechaRegistro = dtpFechaRegistro.Value;
                 logCliente.Instancia.InsertarCliente(c);
+                // Disparar el evento ClienteAgregado
+                ClienteAgregado?.Invoke(this, EventArgs.Empty);
+
+                // Cerrar el formulario this.Dispose();*/
             }
             catch (Exception ex)
             {
@@ -83,7 +88,6 @@ namespace CapaPresentacion
             }
             LimpiarVariables();
             //grupBoxDatos.Enabled = false;
-            //ListarCliente();
 
         }
 

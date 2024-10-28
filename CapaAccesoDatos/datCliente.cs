@@ -25,7 +25,7 @@ namespace CapaAccesoDatos
         #endregion Singleton
 
         #region Metodos
-        ////////////////////Listado de Clientes
+        ///////////////Listado de Clientes
         public List<entCliente> ListarCliente()
         {
             
@@ -34,34 +34,23 @@ namespace CapaAccesoDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //Singleton
-                cmd = new SqlCommand("spListaCliente", cn);
+                cmd = new SqlCommand("spListaClientes", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     entCliente Cli = new entCliente();
-                    Cli.idCliente = Convert.ToInt32(dr["idCliente"]);
-                    Cli.numeroDocumento = dr["numeroDocumento"].ToString();
-                    Cli.razonSocial = dr["razonSocial"].ToString();
-                    Cli.idTipoPersona = Convert.ToInt32(dr["idTipoPersona"]);
-                    Cli.departamento = dr["departamento"].ToString();
-                    Cli.provincia = dr["provincia"].ToString();
-                    Cli.distrito = dr["distrito"].ToString();
-                    Cli.direccion = dr["direccion"].ToString();
-                    Cli.telefono = dr["telefono"].ToString();
-                    Cli.correo = dr["correo"].ToString();
-                    Cli.activo = Convert.ToBoolean(dr["activo"]);
-                    Cli.sitioWeb = dr["sitioWeb"].ToString();
-                    Cli.fechaRegistro = Convert.ToDateTime(dr["fechaRegistro"]);
-                    Cli.ultimaModificacionPor = dr["ultimaModificacionPor"].ToString();
+                    Cli.Id = Convert.ToInt32(dr["Id"]);
+                    Cli.RazonSocial = dr["RazonSocial"].ToString();
+                    Cli.Estado = Convert.ToBoolean(dr["Estado"]);
                     lista.Add(Cli);
                 }
                 dr.Close();
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al obtener los clientes: " + ex.Message);
+                Console.WriteLine("Error en datCliente - ListarCliente: " + ex.Message);
             }
             finally
             {
@@ -73,7 +62,7 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        /////////////////////////InsertaCliente
+        ///////////////InsertaCliente
         public Boolean InsertarCliente(entCliente Cli)
         {
             SqlCommand cmd = null;
@@ -83,18 +72,17 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertaCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@numeroDocumento", Cli.numeroDocumento);
-                cmd.Parameters.AddWithValue("@razonSocial", Cli.razonSocial);
-                cmd.Parameters.AddWithValue("@idTipoPersona", Cli.idTipoPersona);
-                cmd.Parameters.AddWithValue("@departamento", Cli.departamento);
-                cmd.Parameters.AddWithValue("@provincia", Cli.provincia);
-                cmd.Parameters.AddWithValue("@distrito", Cli.distrito);
-                cmd.Parameters.AddWithValue("@direccion", Cli.direccion);
-                cmd.Parameters.AddWithValue("@telefono", Cli.telefono);
-                cmd.Parameters.AddWithValue("@correo", Cli.correo);
-                cmd.Parameters.AddWithValue("@activo", Cli.activo);
-                cmd.Parameters.AddWithValue("@sitioWeb", Cli.sitioWeb);
-                cmd.Parameters.AddWithValue("@fechaRegistro", Cli.fechaRegistro);
+
+                // Agregar todos los parámetros necesarios
+                cmd.Parameters.AddWithValue("@RazonSocial", Cli.RazonSocial);
+                cmd.Parameters.AddWithValue("@RUC", Cli.RUC);
+                cmd.Parameters.AddWithValue("@IdTipoPersona", Cli.IdTipoPersona);
+                cmd.Parameters.AddWithValue("@Telefono", Cli.Telefono);
+                cmd.Parameters.AddWithValue("@Correo", Cli.Correo);
+                cmd.Parameters.AddWithValue("@Direccion", Cli.Direccion);
+                cmd.Parameters.AddWithValue("@Ubigeo", Cli.Ubigeo);
+                cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
+
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -104,12 +92,152 @@ namespace CapaAccesoDatos
             }
             catch (Exception e)
             {
-                throw e;
+                // Manejo de excepciones más detallado
+                Console.WriteLine("Error en datCliente - InsertarCliente: " + e.Message);
+                throw;
             }
-            finally { cmd.Connection.Close(); }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
             return inserta;
         }
 
-        #endregion Metodos
+
+        ///////////////EditaCliente
+        public Boolean EditarCliente(entCliente Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean edita = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spEditaCliente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.AddWithValue("@idCliente", Cli.idCliente);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    edita = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error, en datCliente-EditarCliente, al actualizar cliente: "+ ex.Message);
+            }
+            finally {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return edita;
+        }
+
+        ///////////////DeshabilitaCliente
+        public Boolean DeshabilitarCliente(entCliente Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean delete = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spDeshabilitaCliente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.AddWithValue("@idCliente", Cli.idCliente);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    delete = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return delete;
+        }
+
+        ///////////////Informacion Cliente Por ID
+        public entCliente InformacionClienteID(int idCliente)
+        {
+            SqlCommand cmd = null;
+            entCliente cliente = null;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spInformacionClienteID", cn);
+                cmd.CommandType= CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idCliente", idCliente);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    cliente = new entCliente
+                    {
+                        //idCliente = Convert.ToInt32(dr["idCliente"]),
+                        //numeroDocumento = dr["numeroDocumento"].ToString(),
+                    };
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error, en datCliente-InformacionClienteID, al obtener el cliente: " + ex.Message);
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return cliente;
+        }
+
+        ///////////////Informacion Nombre y RUC
+        public entCliente ObtenerNombre_RUC(int idCliente)
+        {
+            SqlCommand cmd = null;
+            entCliente cliente = null;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spInfoNombre_RUC", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idCliente", idCliente);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    cliente = new entCliente
+                    {
+                        RUC = dr["RUC"].ToString(),
+                        RazonSocial = dr["RazonSocial"].ToString(),
+                    };
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error, en datCliente-ObtenerNombre_RUC: " + ex.Message);
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return cliente;
+        }
+        #endregion metodos
+
     }
 }
