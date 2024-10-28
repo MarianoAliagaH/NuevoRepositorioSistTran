@@ -188,9 +188,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(21, 81);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 16);
+            this.label4.Size = new System.Drawing.Size(136, 16);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Razón Social:";
+            this.label4.Text = "Apellidos y Nombres:";
             // 
             // label3
             // 
@@ -233,7 +233,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(117, 78);
+            this.textBox3.Location = new System.Drawing.Point(162, 81);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(502, 22);
             this.textBox3.TabIndex = 6;
