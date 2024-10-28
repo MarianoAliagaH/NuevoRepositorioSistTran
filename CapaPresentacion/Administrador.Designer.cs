@@ -185,6 +185,7 @@
             this.procesarOrdenesDeTrabajoPorClienteToolStripMenuItem.Name = "procesarOrdenesDeTrabajoPorClienteToolStripMenuItem";
             this.procesarOrdenesDeTrabajoPorClienteToolStripMenuItem.Size = new System.Drawing.Size(359, 26);
             this.procesarOrdenesDeTrabajoPorClienteToolStripMenuItem.Text = "Procesar Ordenes de Trabajo por Cliente";
+            this.procesarOrdenesDeTrabajoPorClienteToolStripMenuItem.Click += new System.EventHandler(this.procesarOrdenesDeTrabajoPorClienteToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
