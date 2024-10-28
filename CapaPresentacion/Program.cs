@@ -14,6 +14,12 @@ namespace CapaPresentacion
         [STAThread]
         static void Main()
         {
+            /* 
+             -----Verificar que tengas los últimos cambios antes de realizar tu lógica o formulario
+
+             ----Realizas tu cambios y lo subes preguntando  que estas a punto de subir proyecto 
+             
+            */
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Administrador());

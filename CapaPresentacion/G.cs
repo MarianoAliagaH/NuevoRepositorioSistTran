@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Facturas : Form
+    public partial class G : Form
     {
-        public Facturas()
+        public G()
         {
             InitializeComponent();
-        }
-
-        private void pnllDatoCliente_Paint(object sender, PaintEventArgs e)
-        {
-          
-        }
-
-        private void btnPagar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Facturas : Form
+    public partial class Procesamiento_de_Oordenes_de_Trabajo_por_Cliente : Form
     {
-        public Facturas()
+        public Procesamiento_de_Oordenes_de_Trabajo_por_Cliente()
         {
             InitializeComponent();
         }
 
-        private void pnllDatoCliente_Paint(object sender, PaintEventArgs e)
-        {
-          
-        }
-
-        private void btnPagar_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
