@@ -96,7 +96,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(56, 29);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1190, 433);
             this.panel1.TabIndex = 6;
@@ -104,7 +104,7 @@
             // dTPFecha
             // 
             this.dTPFecha.Location = new System.Drawing.Point(127, 11);
-            this.dTPFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dTPFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dTPFecha.Name = "dTPFecha";
             this.dTPFecha.Size = new System.Drawing.Size(181, 32);
             this.dTPFecha.TabIndex = 18;
@@ -112,7 +112,7 @@
             // txtBVRef
             // 
             this.txtBVRef.Location = new System.Drawing.Point(735, 181);
-            this.txtBVRef.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBVRef.Margin = new System.Windows.Forms.Padding(4);
             this.txtBVRef.Name = "txtBVRef";
             this.txtBVRef.Size = new System.Drawing.Size(132, 32);
             this.txtBVRef.TabIndex = 17;
@@ -120,7 +120,7 @@
             // txtBSerie
             // 
             this.txtBSerie.Location = new System.Drawing.Point(919, 9);
-            this.txtBSerie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBSerie.Margin = new System.Windows.Forms.Padding(4);
             this.txtBSerie.Name = "txtBSerie";
             this.txtBSerie.Size = new System.Drawing.Size(132, 32);
             this.txtBSerie.TabIndex = 16;
@@ -128,7 +128,7 @@
             // txtBTotal
             // 
             this.txtBTotal.Location = new System.Drawing.Point(976, 102);
-            this.txtBTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtBTotal.Multiline = true;
             this.txtBTotal.Name = "txtBTotal";
             this.txtBTotal.Size = new System.Drawing.Size(191, 50);
@@ -137,7 +137,7 @@
             // txtBMontoIGV
             // 
             this.txtBMontoIGV.Location = new System.Drawing.Point(721, 112);
-            this.txtBMontoIGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBMontoIGV.Margin = new System.Windows.Forms.Padding(4);
             this.txtBMontoIGV.Name = "txtBMontoIGV";
             this.txtBMontoIGV.Size = new System.Drawing.Size(132, 32);
             this.txtBMontoIGV.TabIndex = 14;
@@ -145,7 +145,7 @@
             // txtBIGV
             // 
             this.txtBIGV.Location = new System.Drawing.Point(407, 112);
-            this.txtBIGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBIGV.Margin = new System.Windows.Forms.Padding(4);
             this.txtBIGV.Name = "txtBIGV";
             this.txtBIGV.Size = new System.Drawing.Size(132, 32);
             this.txtBIGV.TabIndex = 13;
@@ -153,7 +153,7 @@
             // txtBSubtotal
             // 
             this.txtBSubtotal.Location = new System.Drawing.Point(129, 112);
-            this.txtBSubtotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBSubtotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtBSubtotal.Name = "txtBSubtotal";
             this.txtBSubtotal.Size = new System.Drawing.Size(132, 32);
             this.txtBSubtotal.TabIndex = 12;
@@ -161,7 +161,7 @@
             // txtBCliente
             // 
             this.txtBCliente.Location = new System.Drawing.Point(127, 62);
-            this.txtBCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtBCliente.Name = "txtBCliente";
             this.txtBCliente.Size = new System.Drawing.Size(1040, 32);
             this.txtBCliente.TabIndex = 11;
@@ -268,7 +268,7 @@
             this.panel2.Controls.Add(this.lblCaracteres);
             this.panel2.Controls.Add(this.lblMetdePago);
             this.panel2.Location = new System.Drawing.Point(4, 257);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1179, 166);
             this.panel2.TabIndex = 0;
@@ -276,7 +276,7 @@
             // txtCaracteres
             // 
             this.txtCaracteres.Location = new System.Drawing.Point(191, 87);
-            this.txtCaracteres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCaracteres.Margin = new System.Windows.Forms.Padding(4);
             this.txtCaracteres.Multiline = true;
             this.txtCaracteres.Name = "txtCaracteres";
             this.txtCaracteres.Size = new System.Drawing.Size(971, 61);
@@ -285,7 +285,7 @@
             // dTPFechadePago
             // 
             this.dTPFechadePago.Location = new System.Drawing.Point(997, 20);
-            this.dTPFechadePago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dTPFechadePago.Margin = new System.Windows.Forms.Padding(4);
             this.dTPFechadePago.Name = "dTPFechadePago";
             this.dTPFechadePago.Size = new System.Drawing.Size(164, 32);
             this.dTPFechadePago.TabIndex = 5;
@@ -295,7 +295,7 @@
             // 
             this.cBMetpago.FormattingEnabled = true;
             this.cBMetpago.Location = new System.Drawing.Point(191, 20);
-            this.cBMetpago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBMetpago.Margin = new System.Windows.Forms.Padding(4);
             this.cBMetpago.Name = "cBMetpago";
             this.cBMetpago.Size = new System.Drawing.Size(187, 32);
             this.cBMetpago.TabIndex = 3;
@@ -333,7 +333,7 @@
             // bCancelarFactura
             // 
             this.bCancelarFactura.Location = new System.Drawing.Point(1081, 626);
-            this.bCancelarFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bCancelarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.bCancelarFactura.Name = "bCancelarFactura";
             this.bCancelarFactura.Size = new System.Drawing.Size(159, 28);
             this.bCancelarFactura.TabIndex = 8;
@@ -344,7 +344,7 @@
             // bGrabar
             // 
             this.bGrabar.Location = new System.Drawing.Point(56, 626);
-            this.bGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bGrabar.Margin = new System.Windows.Forms.Padding(4);
             this.bGrabar.Name = "bGrabar";
             this.bGrabar.Size = new System.Drawing.Size(100, 28);
             this.bGrabar.TabIndex = 7;
@@ -372,8 +372,9 @@
             this.Controls.Add(this.bGrabar);
             this.Controls.Add(this.lblDatosFac);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PagarFactura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PagarFactura";
             this.Load += new System.EventHandler(this.PagarFactura_Load);
             this.panel1.ResumeLayout(false);

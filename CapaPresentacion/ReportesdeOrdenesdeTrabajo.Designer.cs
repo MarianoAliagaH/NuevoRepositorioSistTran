@@ -264,7 +264,8 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "ReportesdeOrdenesdeTrabajo";
-            this.Text = "Reportes de Ordenes de Trabajo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Reportes de Ordenes de Trabajo [Por cliente]";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);

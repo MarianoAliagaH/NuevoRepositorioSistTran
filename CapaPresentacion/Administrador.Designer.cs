@@ -216,6 +216,7 @@
             this.procesarFacturasPorClienteToolStripMenuItem.Name = "procesarFacturasPorClienteToolStripMenuItem";
             this.procesarFacturasPorClienteToolStripMenuItem.Size = new System.Drawing.Size(359, 26);
             this.procesarFacturasPorClienteToolStripMenuItem.Text = "Procesar Facturas por Cliente";
+            this.procesarFacturasPorClienteToolStripMenuItem.Click += new System.EventHandler(this.procesarFacturasPorClienteToolStripMenuItem_Click);
             // 
             // almacenToolStripMenuItem
             // 

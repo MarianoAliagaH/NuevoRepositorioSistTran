@@ -31,7 +31,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnReporteFacCliente = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -51,7 +51,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CBbuscarClienteFac = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -72,7 +72,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Controls.Add(this.btnReporteFacCliente);
             this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Location = new System.Drawing.Point(747, 1);
             this.groupBox4.Name = "groupBox4";
@@ -90,14 +90,15 @@
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnReporteFacCliente
             // 
-            this.button3.Location = new System.Drawing.Point(215, 51);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 50);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Reportes";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnReporteFacCliente.Location = new System.Drawing.Point(215, 51);
+            this.btnReporteFacCliente.Name = "btnReporteFacCliente";
+            this.btnReporteFacCliente.Size = new System.Drawing.Size(75, 50);
+            this.btnReporteFacCliente.TabIndex = 1;
+            this.btnReporteFacCliente.Text = "Reportes";
+            this.btnReporteFacCliente.UseVisualStyleBackColor = true;
+            this.btnReporteFacCliente.Click += new System.EventHandler(this.btnReporteFacCliente_Click);
             // 
             // button2
             // 
@@ -254,7 +255,7 @@
             // 
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.CBbuscarClienteFac);
             this.groupBox1.Location = new System.Drawing.Point(12, 1);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(423, 94);
@@ -278,14 +279,19 @@
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // CBbuscarClienteFac
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(9, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 24);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.Text = "Buscar por Nºde RUC";
+            this.CBbuscarClienteFac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBbuscarClienteFac.FormattingEnabled = true;
+            this.CBbuscarClienteFac.Items.AddRange(new object[] {
+            "Buscar por Código",
+            "Buscar por N° de R.U.C.",
+            "Buscar por Nombres"});
+            this.CBbuscarClienteFac.Location = new System.Drawing.Point(9, 38);
+            this.CBbuscarClienteFac.Name = "CBbuscarClienteFac";
+            this.CBbuscarClienteFac.Size = new System.Drawing.Size(167, 24);
+            this.CBbuscarClienteFac.TabIndex = 0;
+            this.CBbuscarClienteFac.SelectedIndexChanged += new System.EventHandler(this.CBbuscarClienteFac_SelectedIndexChanged);
             // 
             // ProcesamientodeFacturasporCliente
             // 
@@ -298,6 +304,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "ProcesamientodeFacturasporCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Procesamiento de Facturas por Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox4.ResumeLayout(false);
@@ -316,7 +323,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnReporteFacCliente;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -336,6 +343,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CBbuscarClienteFac;
     }
 }

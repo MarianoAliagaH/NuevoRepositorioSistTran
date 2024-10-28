@@ -83,5 +83,11 @@ namespace CapaPresentacion
             Facturas facturasV = new Facturas();
             facturasV.Show();
         }
+
+        private void procesarFacturasPorClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProcesamientodeFacturasporCliente procesarFacturaCliente = new ProcesamientodeFacturasporCliente();
+            procesarFacturaCliente.Show();
+        }
     }
 }

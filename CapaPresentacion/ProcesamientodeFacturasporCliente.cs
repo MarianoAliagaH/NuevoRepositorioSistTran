@@ -15,6 +15,21 @@ namespace CapaPresentacion
         public ProcesamientodeFacturasporCliente()
         {
             InitializeComponent();
+            CBbuscarClienteFac.SelectedIndex = 0;
+        }
+
+        private void CBbuscarClienteFac_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CBbuscarClienteFac.SelectedIndex == 2) {
+                BuscarNombreClienteOT buscarNombre = new BuscarNombreClienteOT();
+                buscarNombre.Show();
+            }
+        }
+
+        private void btnReporteFacCliente_Click(object sender, EventArgs e)
+        {
+            ReportesdeOrdenesdeTrabajo ReportOrdenTra = new ReportesdeOrdenesdeTrabajo();
+            ReportOrdenTra.Show();
         }
     }
 }
