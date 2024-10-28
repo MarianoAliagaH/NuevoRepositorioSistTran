@@ -77,5 +77,11 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Facturas facturasV = new Facturas();
+            facturasV.Show();
+        }
     }
 }

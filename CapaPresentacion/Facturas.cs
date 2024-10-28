@@ -24,7 +24,8 @@ namespace CapaPresentacion
 
         private void btnPagar_Click(object sender, EventArgs e)
         {
-
+            PagarFactura  pagarFacturV = new PagarFactura();
+            pagarFacturV.Show();
         }
     }
 }
