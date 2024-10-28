@@ -130,6 +130,12 @@
     <Compile Include="FleteRutaVerificar.Designer.cs">
       <DependentUpon>FleteRutaVerificar.cs</DependentUpon>
     </Compile>
+    <Compile Include="GastosOperativos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GastosOperativos.Designer.cs">
+      <DependentUpon>GastosOperativos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GenerarNuevaFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FleteRutaVerificar.resx">
       <DependentUpon>FleteRutaVerificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GastosOperativos.resx">
+      <DependentUpon>GastosOperativos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenerarNuevaFactura.resx">
       <DependentUpon>GenerarNuevaFactura.cs</DependentUpon>
