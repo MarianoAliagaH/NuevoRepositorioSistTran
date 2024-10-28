@@ -63,7 +63,8 @@ namespace CapaPresentacion
 
         private void ordenesDeTrabajoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            OrdenesTrabajo ordenesTrabajo = new OrdenesTrabajo();   
+            ordenesTrabajo.Show();
          }
 
         private void procesarOrdenesDeTrabajoPorClienteToolStripMenuItem_Click(object sender, EventArgs e)
