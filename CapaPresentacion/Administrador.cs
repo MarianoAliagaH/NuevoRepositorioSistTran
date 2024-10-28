@@ -63,14 +63,17 @@ namespace CapaPresentacion
 
         private void ordenesDeTrabajoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MantenimientoOrdenesTrabajo MantenimientoOrdenTrabajo = new MantenimientoOrdenesTrabajo();
-            MantenimientoOrdenTrabajo.Show();
+            
          }
 
         private void procesarOrdenesDeTrabajoPorClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProcesarOrdenTrabajoCliente OrdenTrabajoCliente = new ProcesarOrdenTrabajoCliente();
-            OrdenTrabajoCliente.Show();
+            
+        }
+
+        private void Administrador_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -154,12 +154,6 @@
     <Compile Include="ManCliente.Designer.cs">
       <DependentUpon>ManCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="MantenimientoOrdenesTrabajo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MantenimientoOrdenesTrabajo.Designer.cs">
-      <DependentUpon>MantenimientoOrdenesTrabajo.cs</DependentUpon>
-    </Compile>
     <Compile Include="OrdenTrabajoAutorizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,12 +171,6 @@
     </Compile>
     <Compile Include="Personal.Designer.cs">
       <DependentUpon>Personal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProcesarOrdenTrabajoCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProcesarOrdenTrabajoCliente.Designer.cs">
-      <DependentUpon>ProcesarOrdenTrabajoCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -258,9 +246,6 @@
     <EmbeddedResource Include="ManCliente.resx">
       <DependentUpon>ManCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MantenimientoOrdenesTrabajo.resx">
-      <DependentUpon>MantenimientoOrdenesTrabajo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="OrdenTrabajoAutorizacion.resx">
       <DependentUpon>OrdenTrabajoAutorizacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,9 +254,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProcesarOrdenTrabajoCliente.resx">
-      <DependentUpon>ProcesarOrdenTrabajoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
