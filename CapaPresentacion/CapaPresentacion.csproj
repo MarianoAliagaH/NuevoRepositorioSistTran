@@ -166,6 +166,12 @@
     <Compile Include="OrdenTrabajoAutorizacion.Designer.cs">
       <DependentUpon>OrdenTrabajoAutorizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="PagarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PagarFactura.Designer.cs">
+      <DependentUpon>PagarFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrdenTrabajoAutorizacion.resx">
       <DependentUpon>OrdenTrabajoAutorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagarFactura.resx">
+      <DependentUpon>PagarFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
