@@ -178,6 +178,7 @@
             this.ordenesDeTrabajoToolStripMenuItem.Name = "ordenesDeTrabajoToolStripMenuItem";
             this.ordenesDeTrabajoToolStripMenuItem.Size = new System.Drawing.Size(359, 26);
             this.ordenesDeTrabajoToolStripMenuItem.Text = "Ordenes de Trabajo";
+            this.ordenesDeTrabajoToolStripMenuItem.Click += new System.EventHandler(this.ordenesDeTrabajoToolStripMenuItem_Click);
             // 
             // procesarOrdenesDeTrabajoPorClienteToolStripMenuItem
             // 
