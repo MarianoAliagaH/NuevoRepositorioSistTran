@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class ProcesamientodeOrdenesdeTrabajoporCliente : Form
+    public partial class Buscar : Form
     {
-        public ProcesamientodeOrdenesdeTrabajoporCliente()
+        public Buscar()
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
