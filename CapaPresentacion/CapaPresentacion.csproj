@@ -64,23 +64,11 @@
     <Compile Include="AtenderOrdenTrabajoAutorizacion.Designer.cs">
       <DependentUpon>AtenderOrdenTrabajoAutorizacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="B.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="B.Designer.cs">
-      <DependentUpon>B.cs</DependentUpon>
-    </Compile>
     <Compile Include="Baja.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Baja.Designer.cs">
       <DependentUpon>Baja.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Busca.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Busca.Designer.cs">
-      <DependentUpon>Busca.cs</DependentUpon>
     </Compile>
     <Compile Include="BuscarNombreClienteOT.cs">
       <SubType>Form</SubType>
@@ -142,11 +130,11 @@
     <Compile Include="FleteRutaVerificar.Designer.cs">
       <DependentUpon>FleteRutaVerificar.cs</DependentUpon>
     </Compile>
-    <Compile Include="G.cs">
+    <Compile Include="GenerarNuevaFactura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="G.Designer.cs">
-      <DependentUpon>G.cs</DependentUpon>
+    <Compile Include="GenerarNuevaFactura.Designer.cs">
+      <DependentUpon>GenerarNuevaFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="HistorialDocumento.cs">
       <SubType>Form</SubType>
@@ -225,14 +213,8 @@
     <EmbeddedResource Include="AtenderOrdenTrabajoAutorizacion.resx">
       <DependentUpon>AtenderOrdenTrabajoAutorizacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="B.resx">
-      <DependentUpon>B.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Baja.resx">
       <DependentUpon>Baja.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Busca.resx">
-      <DependentUpon>Busca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarNombreClienteOT.resx">
       <DependentUpon>BuscarNombreClienteOT.cs</DependentUpon>
@@ -264,8 +246,8 @@
     <EmbeddedResource Include="FleteRutaVerificar.resx">
       <DependentUpon>FleteRutaVerificar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="G.resx">
-      <DependentUpon>G.cs</DependentUpon>
+    <EmbeddedResource Include="GenerarNuevaFactura.resx">
+      <DependentUpon>GenerarNuevaFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HistorialDocumento.resx">
       <DependentUpon>HistorialDocumento.cs</DependentUpon>

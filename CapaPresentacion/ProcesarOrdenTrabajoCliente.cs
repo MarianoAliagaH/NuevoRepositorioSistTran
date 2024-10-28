@@ -28,5 +28,11 @@ namespace CapaPresentacion
                 NombreCliente.Show();
             }
         }
+
+        private void btnGerararFacturaOTC_Click(object sender, EventArgs e)
+        {
+            GenerarNuevaFactura nuevaFactura = new GenerarNuevaFactura();
+            nuevaFactura.Show();
+        }
     }
 }
