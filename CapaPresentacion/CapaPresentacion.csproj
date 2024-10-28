@@ -58,6 +58,12 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarCostoOperativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarCostoOperativo.Designer.cs">
+      <DependentUpon>AgregarCostoOperativo.cs</DependentUpon>
+    </Compile>
     <Compile Include="AtenderOrdenTrabajoAutorizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,12 @@
     <Compile Include="Personal.Designer.cs">
       <DependentUpon>Personal.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProcesamientodeFacturasporCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcesamientodeFacturasporCliente.Designer.cs">
+      <DependentUpon>ProcesamientodeFacturasporCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProcesarOrdenTrabajoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +228,18 @@
     <Compile Include="RegisterVehiculo.Designer.cs">
       <DependentUpon>RegisterVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportesdeOrdenesdeTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesdeOrdenesdeTrabajo.Designer.cs">
+      <DependentUpon>ReportesdeOrdenesdeTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeguimientodelaOrdendeTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeguimientodelaOrdendeTrabajo.Designer.cs">
+      <DependentUpon>SeguimientodelaOrdendeTrabajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarCostoOperativo.resx">
+      <DependentUpon>AgregarCostoOperativo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AtenderOrdenTrabajoAutorizacion.resx">
       <DependentUpon>AtenderOrdenTrabajoAutorizacion.cs</DependentUpon>
@@ -297,6 +324,9 @@
     <EmbeddedResource Include="Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProcesamientodeFacturasporCliente.resx">
+      <DependentUpon>ProcesamientodeFacturasporCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProcesarOrdenTrabajoCliente.resx">
       <DependentUpon>ProcesarOrdenTrabajoCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +344,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterVehiculo.resx">
       <DependentUpon>RegisterVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesdeOrdenesdeTrabajo.resx">
+      <DependentUpon>ReportesdeOrdenesdeTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeguimientodelaOrdendeTrabajo.resx">
+      <DependentUpon>SeguimientodelaOrdendeTrabajo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vehiculo.resx">
       <DependentUpon>Vehiculo.cs</DependentUpon>
