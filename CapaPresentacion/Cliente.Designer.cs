@@ -37,8 +37,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnAbrirClienteInfo = new System.Windows.Forms.Button();
-            this.btnAbrirClienteDeshabilitar = new System.Windows.Forms.Button();
-            this.btnAbrirClienteModificar = new System.Windows.Forms.Button();
+            this.btnDeshabilitaCliente = new System.Windows.Forms.Button();
             this.btnAbrirClienteNuevo = new System.Windows.Forms.Button();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.lblTotalClientes = new System.Windows.Forms.Label();
@@ -88,8 +87,7 @@
             this.groupBox2.Controls.Add(this.btnCerrar);
             this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Controls.Add(this.btnAbrirClienteInfo);
-            this.groupBox2.Controls.Add(this.btnAbrirClienteDeshabilitar);
-            this.groupBox2.Controls.Add(this.btnAbrirClienteModificar);
+            this.groupBox2.Controls.Add(this.btnDeshabilitaCliente);
             this.groupBox2.Controls.Add(this.btnAbrirClienteNuevo);
             this.groupBox2.Location = new System.Drawing.Point(12, 596);
             this.groupBox2.Name = "groupBox2";
@@ -110,7 +108,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(796, 48);
+            this.button6.Location = new System.Drawing.Point(526, 48);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(225, 30);
             this.button6.TabIndex = 5;
@@ -120,7 +118,7 @@
             // 
             // btnAbrirClienteInfo
             // 
-            this.btnAbrirClienteInfo.Location = new System.Drawing.Point(644, 26);
+            this.btnAbrirClienteInfo.Location = new System.Drawing.Point(197, 26);
             this.btnAbrirClienteInfo.Name = "btnAbrirClienteInfo";
             this.btnAbrirClienteInfo.Size = new System.Drawing.Size(75, 75);
             this.btnAbrirClienteInfo.TabIndex = 4;
@@ -128,24 +126,15 @@
             this.btnAbrirClienteInfo.UseVisualStyleBackColor = true;
             this.btnAbrirClienteInfo.Click += new System.EventHandler(this.btnAbrirClienteInfo_Click);
             // 
-            // btnAbrirClienteDeshabilitar
+            // btnDeshabilitaCliente
             // 
-            this.btnAbrirClienteDeshabilitar.Location = new System.Drawing.Point(454, 26);
-            this.btnAbrirClienteDeshabilitar.Name = "btnAbrirClienteDeshabilitar";
-            this.btnAbrirClienteDeshabilitar.Size = new System.Drawing.Size(75, 75);
-            this.btnAbrirClienteDeshabilitar.TabIndex = 3;
-            this.btnAbrirClienteDeshabilitar.Text = "Cliente Deshabilitar";
-            this.btnAbrirClienteDeshabilitar.UseVisualStyleBackColor = true;
-            // 
-            // btnAbrirClienteModificar
-            // 
-            this.btnAbrirClienteModificar.Location = new System.Drawing.Point(258, 26);
-            this.btnAbrirClienteModificar.Name = "btnAbrirClienteModificar";
-            this.btnAbrirClienteModificar.Size = new System.Drawing.Size(75, 75);
-            this.btnAbrirClienteModificar.TabIndex = 2;
-            this.btnAbrirClienteModificar.Text = "Cliente Modificar";
-            this.btnAbrirClienteModificar.UseVisualStyleBackColor = true;
-            this.btnAbrirClienteModificar.Click += new System.EventHandler(this.btnAbrirClienteModificar_Click);
+            this.btnDeshabilitaCliente.Location = new System.Drawing.Point(990, 26);
+            this.btnDeshabilitaCliente.Name = "btnDeshabilitaCliente";
+            this.btnDeshabilitaCliente.Size = new System.Drawing.Size(75, 75);
+            this.btnDeshabilitaCliente.TabIndex = 3;
+            this.btnDeshabilitaCliente.Text = "Cliente Deshabilitar";
+            this.btnDeshabilitaCliente.UseVisualStyleBackColor = true;
+            this.btnDeshabilitaCliente.Click += new System.EventHandler(this.btnDeshabilitaCliente_Click);
             // 
             // btnAbrirClienteNuevo
             // 
@@ -174,6 +163,8 @@
             this.dgvCliente.ReadOnly = true;
             this.dgvCliente.Size = new System.Drawing.Size(1240, 397);
             this.dgvCliente.TabIndex = 2;
+            this.dgvCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellClick);
+            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
             // 
             // lblTotalClientes
             // 
@@ -216,8 +207,7 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnAbrirClienteInfo;
-        private System.Windows.Forms.Button btnAbrirClienteDeshabilitar;
-        private System.Windows.Forms.Button btnAbrirClienteModificar;
+        private System.Windows.Forms.Button btnDeshabilitaCliente;
         private System.Windows.Forms.Button btnAbrirClienteNuevo;
         private System.Windows.Forms.DataGridView dgvCliente;
         private System.Windows.Forms.Label lblTotalClientes;

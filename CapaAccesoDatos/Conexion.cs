@@ -23,7 +23,7 @@ namespace CapaAccesoDatos
             try
             {
                 cn.Open();
-                
+
                 Console.WriteLine("Conexión establecida correctamente.");
             }
             catch (Exception ex)

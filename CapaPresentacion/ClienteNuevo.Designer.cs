@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbActivo = new System.Windows.Forms.CheckBox();
+            this.cmbTipoPersona = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -42,26 +44,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtSitioWeb = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnInsertaCliente = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnConsultaExterna = new System.Windows.Forms.Button();
             this.cbAutorizaOrden = new System.Windows.Forms.CheckBox();
-            this.cmbTipoPersona = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.cbActivo = new System.Windows.Forms.CheckBox();
-            this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +88,28 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Generales";
+            // 
+            // cbActivo
+            // 
+            this.cbActivo.AutoSize = true;
+            this.cbActivo.Location = new System.Drawing.Point(52, 222);
+            this.cbActivo.Name = "cbActivo";
+            this.cbActivo.Size = new System.Drawing.Size(72, 23);
+            this.cbActivo.TabIndex = 14;
+            this.cbActivo.Text = "Activo";
+            this.cbActivo.UseVisualStyleBackColor = true;
+            // 
+            // cmbTipoPersona
+            // 
+            this.cmbTipoPersona.FormattingEnabled = true;
+            this.cmbTipoPersona.Items.AddRange(new object[] {
+            "SELECCIONAR",
+            "NATURAL",
+            "JURIDICA"});
+            this.cmbTipoPersona.Location = new System.Drawing.Point(762, 31);
+            this.cmbTipoPersona.Name = "cmbTipoPersona";
+            this.cmbTipoPersona.Size = new System.Drawing.Size(210, 27);
+            this.cmbTipoPersona.TabIndex = 13;
             // 
             // label13
             // 
@@ -216,6 +237,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Adicionales";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(50, 196);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(118, 19);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Fecha Registro:";
+            // 
+            // dtpFechaRegistro
+            // 
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(174, 190);
+            this.dtpFechaRegistro.Name = "dtpFechaRegistro";
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(210, 27);
+            this.dtpFechaRegistro.TabIndex = 18;
+            // 
             // textBox12
             // 
             this.textBox12.Location = new System.Drawing.Point(762, 39);
@@ -229,6 +266,13 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(210, 27);
             this.txtTelefono.TabIndex = 16;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(762, 89);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(210, 27);
+            this.textBox10.TabIndex = 15;
             // 
             // txtCorreo
             // 
@@ -261,6 +305,15 @@
             this.label9.Size = new System.Drawing.Size(96, 19);
             this.label9.TabIndex = 4;
             this.label9.Text = "E-Mail Nº 1:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(638, 89);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 19);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "E-Mail Nº 2:";
             // 
             // label7
             // 
@@ -319,60 +372,6 @@
             this.cbAutorizaOrden.Text = "Autoriza Orden";
             this.cbAutorizaOrden.UseVisualStyleBackColor = true;
             // 
-            // cmbTipoPersona
-            // 
-            this.cmbTipoPersona.FormattingEnabled = true;
-            this.cmbTipoPersona.Items.AddRange(new object[] {
-            "SELECCIONAR",
-            "NATURAL",
-            "JURIDICA"});
-            this.cmbTipoPersona.Location = new System.Drawing.Point(762, 31);
-            this.cmbTipoPersona.Name = "cmbTipoPersona";
-            this.cmbTipoPersona.Size = new System.Drawing.Size(210, 27);
-            this.cmbTipoPersona.TabIndex = 13;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(638, 89);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 19);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "E-Mail Nº 2:";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(762, 89);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(210, 27);
-            this.textBox10.TabIndex = 15;
-            // 
-            // cbActivo
-            // 
-            this.cbActivo.AutoSize = true;
-            this.cbActivo.Location = new System.Drawing.Point(52, 222);
-            this.cbActivo.Name = "cbActivo";
-            this.cbActivo.Size = new System.Drawing.Size(72, 23);
-            this.cbActivo.TabIndex = 14;
-            this.cbActivo.Text = "Activo";
-            this.cbActivo.UseVisualStyleBackColor = true;
-            // 
-            // dtpFechaRegistro
-            // 
-            this.dtpFechaRegistro.Location = new System.Drawing.Point(174, 190);
-            this.dtpFechaRegistro.Name = "dtpFechaRegistro";
-            this.dtpFechaRegistro.Size = new System.Drawing.Size(210, 27);
-            this.dtpFechaRegistro.TabIndex = 18;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(50, 196);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(118, 19);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Fecha Registro:";
-            // 
             // ClienteNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -401,7 +400,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnInsertaCliente;
         private System.Windows.Forms.Button btnCerrar;

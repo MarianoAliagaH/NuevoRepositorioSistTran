@@ -33,8 +33,8 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnAbrirFleteRutaNuevo = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNumRUC = new System.Windows.Forms.Label();
+            this.lblNombreEmpresa = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -81,8 +81,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblNumRUC);
+            this.groupBox1.Controls.Add(this.lblNombreEmpresa);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1240, 100);
@@ -90,23 +90,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Cliente";
             // 
-            // label2
+            // lblNumRUC
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(702, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "R.U.C. Nº : ...";
+            this.lblNumRUC.AutoSize = true;
+            this.lblNumRUC.Location = new System.Drawing.Point(702, 23);
+            this.lblNumRUC.Name = "lblNumRUC";
+            this.lblNumRUC.Size = new System.Drawing.Size(110, 19);
+            this.lblNumRUC.TabIndex = 1;
+            this.lblNumRUC.Text = "R.U.C. Nº : ...";
             // 
-            // label1
+            // lblNombreEmpresa
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cliente: ...";
+            this.lblNombreEmpresa.AutoSize = true;
+            this.lblNombreEmpresa.Location = new System.Drawing.Point(6, 23);
+            this.lblNombreEmpresa.Name = "lblNombreEmpresa";
+            this.lblNombreEmpresa.Size = new System.Drawing.Size(83, 19);
+            this.lblNombreEmpresa.TabIndex = 0;
+            this.lblNombreEmpresa.Text = "Cliente: ...";
             // 
             // FleteRuta
             // 
@@ -135,7 +135,7 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnAbrirFleteRutaNuevo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNumRUC;
+        private System.Windows.Forms.Label lblNombreEmpresa;
     }
 }
