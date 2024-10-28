@@ -68,7 +68,8 @@ namespace CapaPresentacion
 
         private void procesarOrdenesDeTrabajoPorClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            ProcesarOrdenTrabajoCliente ProcOrdenTC = new ProcesarOrdenTrabajoCliente();
+            ProcOrdenTC.Show();
         }
 
         private void Administrador_Load(object sender, EventArgs e)
