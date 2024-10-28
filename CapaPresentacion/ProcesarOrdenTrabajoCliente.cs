@@ -31,5 +31,10 @@ namespace CapaPresentacion
                 buscarNombre.Show();
             }
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
