@@ -1,8 +1,7 @@
 ﻿namespace CapaPresentacion
 {
 <<<<<<<< HEAD:CapaPresentacion/Procesamiento de Ordenes de Trabajo por Cliente.Designer.cs
-    partial class ProcesamientodeOrdenesdeTrabajoporCliente
-========
+    partial class ProcesarOrdenTrabajoCliente========
     partial class ProcesarOrdenTrabajoCliente
 >>>>>>>> 8f103cb356489de3f8d53da3cd758337c3587a06:CapaPresentacion/ProcesarOrdenTrabajoCliente.Designer.cs
     {
