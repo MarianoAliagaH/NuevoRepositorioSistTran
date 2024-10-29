@@ -46,9 +46,19 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Location = new System.Drawing.Point(48, 40);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(36, 32);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(648, 49);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(486, 230);
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
             // 
@@ -57,17 +67,19 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label9.Location = new System.Drawing.Point(6, 18);
+            this.label9.Location = new System.Drawing.Point(4, 15);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(178, 25);
+            this.label9.Size = new System.Drawing.Size(147, 20);
             this.label9.TabIndex = 22;
             this.label9.Text = "Datos Documentos";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(383, 328);
+            this.button2.Location = new System.Drawing.Point(287, 266);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 50);
+            this.button2.Size = new System.Drawing.Size(70, 41);
             this.button2.TabIndex = 43;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
@@ -75,102 +87,103 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(235, 328);
+            this.button1.Location = new System.Drawing.Point(176, 266);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 50);
+            this.button1.Size = new System.Drawing.Size(70, 41);
             this.button1.TabIndex = 42;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(523, 215);
+            this.dateTimePicker2.Location = new System.Drawing.Point(335, 128);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker2.TabIndex = 41;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(433, 220);
+            this.label4.Location = new System.Drawing.Point(268, 132);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 16);
+            this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 40;
             this.label4.Text = "Vencimiento:";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(161, 215);
+            this.dateTimePicker1.Location = new System.Drawing.Point(84, 128);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 39;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(114, 221);
+            this.label3.Location = new System.Drawing.Point(49, 133);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 16);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 38;
             this.label3.Text = "Inicio:";
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(161, 157);
+            this.comboBox2.Location = new System.Drawing.Point(105, 103);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 24);
+            this.comboBox2.Size = new System.Drawing.Size(150, 21);
             this.comboBox2.TabIndex = 37;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(76, 160);
+            this.label1.Location = new System.Drawing.Point(41, 105);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 16);
+            this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 36;
             this.label1.Text = "Documento:";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(161, 101);
+            this.comboBox1.Location = new System.Drawing.Point(105, 63);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 24);
+            this.comboBox1.Size = new System.Drawing.Size(150, 21);
             this.comboBox1.TabIndex = 35;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 101);
+            this.label2.Location = new System.Drawing.Point(18, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 16);
+            this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 34;
             this.label2.Text = "Tipo Documento:";
             // 
             // DocumentosPersonal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DocumentosPersonal";
             this.Text = "DocumentosPersonal";
             this.Load += new System.EventHandler(this.DocumentosPersonal_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

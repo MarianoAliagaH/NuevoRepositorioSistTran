@@ -166,6 +166,18 @@
     <Compile Include="ManCliente.Designer.cs">
       <DependentUpon>ManCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManConductor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManConductor.Designer.cs">
+      <DependentUpon>ManConductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManVehiculos.Designer.cs">
+      <DependentUpon>ManVehiculos.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrdenTrabajoAutorizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,11 +196,11 @@
     <Compile Include="Personal.Designer.cs">
       <DependentUpon>Personal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Procesamiento de Oordenes de Trabajo por Cliente.cs">
+    <Compile Include="ProcesamientoOrdenesTrabajoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Procesamiento de Oordenes de Trabajo por Cliente.Designer.cs">
-      <DependentUpon>Procesamiento de Oordenes de Trabajo por Cliente.cs</DependentUpon>
+    <Compile Include="ProcesamientoOrdenesTrabajoCliente.Designer.cs">
+      <DependentUpon>ProcesamientoOrdenesTrabajoCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -270,6 +282,12 @@
     <EmbeddedResource Include="ManCliente.resx">
       <DependentUpon>ManCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManConductor.resx">
+      <DependentUpon>ManConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManVehiculos.resx">
+      <DependentUpon>ManVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrdenTrabajoAutorizacion.resx">
       <DependentUpon>OrdenTrabajoAutorizacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,8 +297,8 @@
     <EmbeddedResource Include="Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Procesamiento de Oordenes de Trabajo por Cliente.resx">
-      <DependentUpon>Procesamiento de Oordenes de Trabajo por Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="ProcesamientoOrdenesTrabajoCliente.resx">
+      <DependentUpon>ProcesamientoOrdenesTrabajoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

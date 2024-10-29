@@ -117,7 +117,18 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spEditaCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                //cmd.Parameters.AddWithValue("@idCliente", Cli.idCliente);
+
+                // Agregar todos los parámetros necesarios
+                cmd.Parameters.AddWithValue("@Id", Cli.Id);
+                cmd.Parameters.AddWithValue("@RazonSocial", Cli.RazonSocial);
+                cmd.Parameters.AddWithValue("@RUC", Cli.RUC);
+                cmd.Parameters.AddWithValue("@IdTipoPersona", Cli.IdTipoPersona);
+                cmd.Parameters.AddWithValue("@Telefono", Cli.Telefono);
+                cmd.Parameters.AddWithValue("@Correo", Cli.Correo);
+                cmd.Parameters.AddWithValue("@Direccion", Cli.Direccion);
+                cmd.Parameters.AddWithValue("@Ubigeo", Cli.Ubigeo);
+                cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
+
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -127,9 +138,10 @@ namespace CapaAccesoDatos
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error, en datCliente-EditarCliente, al actualizar cliente: "+ ex.Message);
+                Console.WriteLine("Error en datCliente - EditarCliente, al actualizar cliente: " + ex.Message);
             }
-            finally {
+            finally
+            {
                 if (cmd != null && cmd.Connection != null)
                 {
                     cmd.Connection.Close();
@@ -173,7 +185,7 @@ namespace CapaAccesoDatos
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInformacionClienteID", cn);
-                cmd.CommandType= CommandType.StoredProcedure;
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idCliente", idCliente);
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -181,15 +193,22 @@ namespace CapaAccesoDatos
                 {
                     cliente = new entCliente
                     {
-                        //idCliente = Convert.ToInt32(dr["idCliente"]),
-                        //numeroDocumento = dr["numeroDocumento"].ToString(),
+                        Id = Convert.ToInt32(dr["Id"]),
+                        RazonSocial = dr["RazonSocial"].ToString(),
+                        RUC = dr["RUC"].ToString(),
+                        IdTipoPersona = Convert.ToInt32(dr["IdTipoPersona"]),
+                        Telefono = dr["Telefono"].ToString(),
+                        Correo = dr["Correo"].ToString(),
+                        Direccion = dr["Direccion"].ToString(),
+                        Ubigeo = dr["Ubigeo"].ToString(),
+                        Estado = Convert.ToBoolean(dr["Estado"])
                     };
                 }
                 dr.Close();
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error, en datCliente-InformacionClienteID, al obtener el cliente: " + ex.Message);
+                Console.WriteLine("Error en datCliente - InformacionClienteID, al obtener el cliente: " + ex.Message);
             }
             finally
             {

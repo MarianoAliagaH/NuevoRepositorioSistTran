@@ -14,6 +14,7 @@ namespace CapaPresentacion
 {
     public partial class ManCliente : Form
     {
+        private int idClienteSeleccionado;
         public ManCliente()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace CapaPresentacion
             ListarClientes();
             gbDatos.Enabled = false;
             cmbTipoPersona.SelectedIndex = 0;
+            ConfigurarBotonesInicial();
         }
 
         public void ListarClientes()
@@ -55,16 +57,182 @@ namespace CapaPresentacion
 
         private void btnNuevo_Click_1(object sender, EventArgs e)
         {
-            //LimpiarControles();
-            btnNuevo.Enabled = false;
+            LimpiarControles();
             gbDatos.Enabled = true;
             txtId.Enabled = false;
             txtRazonSocial.Focus();
             cbEstado.Checked = true;
-            btnGuardar.Visible = true;
-            cbEstado.Enabled = true;
+            gbListaClientes.Enabled = false;
+            ConfigurarBotonesNuevo();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            gbDatos.Enabled = false;
+            ConfigurarBotonesInicial();
+            btnNuevo.Focus();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (idClienteSeleccionado>0)
+            {
+                gbDatos.Enabled = true;
+                txtId.Enabled = false;
+                ConfigurarBotonesEditar();
+                try
+                {
+                    entCliente c = logCliente.Instancia.InformacionClienteID(idClienteSeleccionado);
+                    if (c != null)
+                    {
+                        //txtId.Text = c.Id.ToString();
+                        txtRazonSocial.Text = c.RazonSocial;
+                        txtRUC.Text = c.RUC;
+                        cmbTipoPersona.SelectedIndex = c.IdTipoPersona;
+                        txtDireccion.Text = c.Direccion;
+                        txtTelefono.Text = c.Telefono;
+                        txtCorreo.Text = c.Correo;
+                        cbEstado.Checked = c.Estado;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró la información del cliente.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la información del cliente: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un cliente de la lista primero");
+            }
+            
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entCliente c = new entCliente
+                {
+                    RazonSocial = txtRazonSocial.Text.Trim(),
+                    RUC = txtRUC.Text.Trim(),
+                    IdTipoPersona = cmbTipoPersona.SelectedIndex,
+                    Telefono = txtTelefono.Text.Trim(),
+                    Correo = txtCorreo.Text.Trim(),
+                    Direccion = txtDireccion.Text.Trim(),
+                    Ubigeo = txtUbigeo.Text.Trim(),
+                    Estado = cbEstado.Checked
+                };
+
+                if (c.IdTipoPersona == 0)
+                {
+                    MessageBox.Show("Seleccione Tipo Persona");
+                    return;
+                }
+
+                bool resultado = logCliente.Instancia.InsertarCliente(c);
+
+                if (resultado)
+                {
+                    MessageBox.Show("Cliente guardado exitosamente.");
+                    LimpiarControles();
+                    //gbDatos.Enabled = false;
+                    ListarClientes();
+                    ConfigurarBotonesInicial();
+                }
+                else
+                {
+                    MessageBox.Show("Error al guardar el cliente.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void dgvListaClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dgvListaClientes.Rows[e.RowIndex];
+                idClienteSeleccionado = Convert.ToInt32(fila.Cells[0].Value);
+                txtId.Text=idClienteSeleccionado.ToString();
+            }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entCliente c = new entCliente
+                {
+                    Id = int.Parse(txtId.Text.Trim()),
+                    RazonSocial = txtRazonSocial.Text.Trim(),
+                    RUC = txtRUC.Text.Trim(),
+                    IdTipoPersona = cmbTipoPersona.SelectedIndex,
+                    Telefono = txtTelefono.Text.Trim(),
+                    Correo = txtCorreo.Text.Trim(),
+                    Direccion = txtDireccion.Text.Trim(),
+                    Ubigeo = txtUbigeo.Text.Trim(),
+                    Estado = cbEstado.Checked
+                };
+
+                bool resultado = logCliente.Instancia.EditarCliente(c);
+
+                if (resultado)
+                {
+                    MessageBox.Show("Cliente modificado exitosamente.");
+                    //gbDatos.Enabled = false;
+                    idClienteSeleccionado = 0;
+                    ConfigurarBotonesInicial();
+                }
+                else
+                {
+                    MessageBox.Show("Error al modificar el cliente.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            LimpiarControles();
+            ListarClientes();
+        }
+
+        private void ConfigurarBotonesInicial()
+        {
+            LimpiarControles();
+            gbListaClientes.Enabled = true;
+            gbDatos.Enabled = false;
+            btnNuevo.Enabled = true;
+            btnEditar.Enabled = true;
+            btnAgregar.Enabled = false;
+            btnActualizar.Enabled = false;
+        }
+
+        private void ConfigurarBotonesNuevo()
+        {
+            
+            btnNuevo.Enabled = false;
             btnEditar.Enabled = false;
-            //btnModificar.Visible = false;
+            btnConsultaExterna.Enabled = true;
+            btnAgregar.Enabled = true;
+            btnActualizar.Enabled = false;
+        }
+
+        private void ConfigurarBotonesEditar()
+        {
+            gbListaClientes.Enabled = false;
+            btnNuevo.Enabled = false;
+            btnEditar.Enabled = false;
+            btnConsultaExterna.Enabled = false;
+            btnAgregar.Enabled = false;
+            btnActualizar.Enabled = true;
         }
 
         public void LimpiarControles()
@@ -78,79 +246,6 @@ namespace CapaPresentacion
             txtDireccion.Text = "";
             txtUbigeo.Text = "";
             cbEstado.Checked = false;
-        }
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            //LimpiarVariables();
-            gbDatos.Enabled = false;
-            btnNuevo.Enabled = true;
-            btnNuevo.Focus();
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            txtId.Enabled = false;
-            btnNuevo.Enabled = false;
-            gbDatos.Enabled=true;
-            btnEditar.Enabled = true;
-
-            
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            
-            try
-            {
-                // Crear una nueva instancia de entCliente
-                entCliente c = new entCliente();
-                // Asignar valores a las propiedades del cliente
-                c.RazonSocial = txtRazonSocial.Text.Trim();
-                c.RUC = txtRUC.Text.Trim();
-                // Validar la selección del tipo de persona
-                if (cmbTipoPersona.SelectedIndex == 1)
-                {
-                    c.IdTipoPersona = 1;
-                }
-                else if (cmbTipoPersona.SelectedIndex == 2)
-                {
-                    c.IdTipoPersona = 2;
-                }
-                else
-                {
-                    MessageBox.Show("Seleccione Tipo Persona");
-                    return; // Salir del método si no se selecciona un tipo de persona válido
-                }
-                // Asignar los demás valores
-                c.Telefono = txtTelefono.Text.Trim();
-                c.Correo = txtCorreo.Text.Trim();
-                c.Direccion = txtDireccion.Text.Trim();
-                c.Ubigeo = txtUbigeo.Text.Trim();
-                c.Estado = cbEstado.Checked;
-                // Llamar al método para insertar el cliente
-                bool resultado = logCliente.Instancia.InsertarCliente(c);
-
-                // Verificar el resultado de la inserción
-                if (resultado)
-                {
-                    MessageBox.Show("Cliente guardado exitosamente.");
-                    LimpiarControles();
-                    gbDatos.Enabled = false;
-                    ListarClientes();
-                    dgvListaClientes.Focus();
-                    btnNuevo.Enabled = true;
-                    btnEditar.Enabled = true;
-                }
-                else
-                {
-                    MessageBox.Show("Error al guardar el cliente.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
         }
     }
 }

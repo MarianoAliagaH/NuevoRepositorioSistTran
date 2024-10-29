@@ -10,21 +10,15 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Vehiculo : Form
+    public partial class ManVehiculos : Form
     {
-        public Vehiculo()
+        public ManVehiculos()
         {
             InitializeComponent();
-        }
 
-        private void btnGuardarV_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
     }
 }

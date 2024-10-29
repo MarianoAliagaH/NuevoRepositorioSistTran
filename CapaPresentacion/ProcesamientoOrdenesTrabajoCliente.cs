@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Vehiculo : Form
+    public partial class ProcesamientoOrdenesTrabajoCliente : Form
     {
-        public Vehiculo()
+        public ProcesamientoOrdenesTrabajoCliente()
         {
             InitializeComponent();
         }
 
-        private void btnGuardarV_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
