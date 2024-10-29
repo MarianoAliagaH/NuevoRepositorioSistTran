@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class Busca
+    partial class BuscarporCódigo
     {
         /// <summary>
         /// Required designer variable.
@@ -70,7 +70,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(601, 324);
             this.dataGridView1.TabIndex = 3;
             // 
-            // Busca
+            // BuscarporCódigo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,7 +79,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Name = "Busca";
+            this.Name = "BuscarporCódigo";
             this.Text = "Buscar por Código";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

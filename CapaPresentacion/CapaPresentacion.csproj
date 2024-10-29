@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13.4\lib\net461\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,17 +67,17 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarCostoOperativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarCostoOperativo.Designer.cs">
+      <DependentUpon>AgregarCostoOperativo.cs</DependentUpon>
+    </Compile>
     <Compile Include="AtenderOrdenTrabajoAutorizacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AtenderOrdenTrabajoAutorizacion.Designer.cs">
       <DependentUpon>AtenderOrdenTrabajoAutorizacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="B.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="B.Designer.cs">
-      <DependentUpon>B.cs</DependentUpon>
     </Compile>
     <Compile Include="Baja.cs">
       <SubType>Form</SubType>
@@ -76,17 +85,11 @@
     <Compile Include="Baja.Designer.cs">
       <DependentUpon>Baja.cs</DependentUpon>
     </Compile>
-    <Compile Include="Busca.cs">
+    <Compile Include="BuscarNombreClienteOT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Busca.Designer.cs">
-      <DependentUpon>Busca.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Buscar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Buscar.Designer.cs">
-      <DependentUpon>Buscar.cs</DependentUpon>
+    <Compile Include="BuscarNombreClienteOT.Designer.cs">
+      <DependentUpon>BuscarNombreClienteOT.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
@@ -142,11 +145,17 @@
     <Compile Include="FleteRutaVerificar.Designer.cs">
       <DependentUpon>FleteRutaVerificar.cs</DependentUpon>
     </Compile>
-    <Compile Include="G.cs">
+    <Compile Include="GastosOperativos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="G.Designer.cs">
-      <DependentUpon>G.cs</DependentUpon>
+    <Compile Include="GastosOperativos.Designer.cs">
+      <DependentUpon>GastosOperativos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarNuevaFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarNuevaFactura.Designer.cs">
+      <DependentUpon>GenerarNuevaFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="HistorialDocumento.cs">
       <SubType>Form</SubType>
@@ -166,18 +175,6 @@
     <Compile Include="ManCliente.Designer.cs">
       <DependentUpon>ManCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManConductor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManConductor.Designer.cs">
-      <DependentUpon>ManConductor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManVehiculos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManVehiculos.Designer.cs">
-      <DependentUpon>ManVehiculos.cs</DependentUpon>
-    </Compile>
     <Compile Include="OrdenTrabajoAutorizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,11 +193,17 @@
     <Compile Include="Personal.Designer.cs">
       <DependentUpon>Personal.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProcesamientoOrdenesTrabajoCliente.cs">
+    <Compile Include="ProcesamientodeFacturasporCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProcesamientoOrdenesTrabajoCliente.Designer.cs">
-      <DependentUpon>ProcesamientoOrdenesTrabajoCliente.cs</DependentUpon>
+    <Compile Include="ProcesamientodeFacturasporCliente.Designer.cs">
+      <DependentUpon>ProcesamientodeFacturasporCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcesarOrdenTrabajoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcesarOrdenTrabajoCliente.Designer.cs">
+      <DependentUpon>ProcesarOrdenTrabajoCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -216,6 +219,18 @@
     <Compile Include="RegisterVehiculo.Designer.cs">
       <DependentUpon>RegisterVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportesdeOrdenesdeTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesdeOrdenesdeTrabajo.Designer.cs">
+      <DependentUpon>ReportesdeOrdenesdeTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeguimientodelaOrdendeTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeguimientodelaOrdendeTrabajo.Designer.cs">
+      <DependentUpon>SeguimientodelaOrdendeTrabajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,20 +243,17 @@
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarCostoOperativo.resx">
+      <DependentUpon>AgregarCostoOperativo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AtenderOrdenTrabajoAutorizacion.resx">
       <DependentUpon>AtenderOrdenTrabajoAutorizacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="B.resx">
-      <DependentUpon>B.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Baja.resx">
       <DependentUpon>Baja.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Busca.resx">
-      <DependentUpon>Busca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Buscar.resx">
-      <DependentUpon>Buscar.cs</DependentUpon>
+    <EmbeddedResource Include="BuscarNombreClienteOT.resx">
+      <DependentUpon>BuscarNombreClienteOT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
@@ -270,8 +282,11 @@
     <EmbeddedResource Include="FleteRutaVerificar.resx">
       <DependentUpon>FleteRutaVerificar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="G.resx">
-      <DependentUpon>G.cs</DependentUpon>
+    <EmbeddedResource Include="GastosOperativos.resx">
+      <DependentUpon>GastosOperativos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerarNuevaFactura.resx">
+      <DependentUpon>GenerarNuevaFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HistorialDocumento.resx">
       <DependentUpon>HistorialDocumento.cs</DependentUpon>
@@ -282,11 +297,14 @@
     <EmbeddedResource Include="ManCliente.resx">
       <DependentUpon>ManCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManConductor.resx">
-      <DependentUpon>ManConductor.cs</DependentUpon>
+    <EmbeddedResource Include="MonitoreoOrdenTrabajo.resx">
+      <DependentUpon>MonitoreoOrdenTrabajo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManVehiculos.resx">
-      <DependentUpon>ManVehiculos.cs</DependentUpon>
+    <EmbeddedResource Include="NuevaOrdenTrabajo.resx">
+      <DependentUpon>NuevaOrdenTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenesTrabajo.resx">
+      <DependentUpon>OrdenesTrabajo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrdenTrabajoAutorizacion.resx">
       <DependentUpon>OrdenTrabajoAutorizacion.cs</DependentUpon>
@@ -297,8 +315,8 @@
     <EmbeddedResource Include="Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProcesamientoOrdenesTrabajoCliente.resx">
-      <DependentUpon>ProcesamientoOrdenesTrabajoCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Procesamiento de Oordenes de Trabajo por Cliente.resx">
+      <DependentUpon>Procesamiento de Oordenes de Trabajo por Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -308,6 +326,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RegisterPersonal.resx">
       <DependentUpon>RegisterPersonal.cs</DependentUpon>
@@ -315,9 +334,16 @@
     <EmbeddedResource Include="RegisterVehiculo.resx">
       <DependentUpon>RegisterVehiculo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportesdeOrdenesdeTrabajo.resx">
+      <DependentUpon>ReportesdeOrdenesdeTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeguimientodelaOrdendeTrabajo.resx">
+      <DependentUpon>SeguimientodelaOrdendeTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vehiculo.resx">
       <DependentUpon>Vehiculo.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -340,6 +366,12 @@
       <Project>{41f6a658-2f1d-41ef-a2a5-84578662ad38}</Project>
       <Name>CapaLogicaNegocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plantilla.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trc.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -178,12 +178,14 @@
             this.ordenesDeTrabajoToolStripMenuItem.Name = "ordenesDeTrabajoToolStripMenuItem";
             this.ordenesDeTrabajoToolStripMenuItem.Size = new System.Drawing.Size(359, 26);
             this.ordenesDeTrabajoToolStripMenuItem.Text = "Ordenes de Trabajo";
+            this.ordenesDeTrabajoToolStripMenuItem.Click += new System.EventHandler(this.ordenesDeTrabajoToolStripMenuItem_Click);
             // 
             // procesarOrdenesDeTrabajoPorClienteToolStripMenuItem
             // 
             this.procesarOrdenesDeTrabajoPorClienteToolStripMenuItem.Name = "procesarOrdenesDeTrabajoPorClienteToolStripMenuItem";
             this.procesarOrdenesDeTrabajoPorClienteToolStripMenuItem.Size = new System.Drawing.Size(359, 26);
             this.procesarOrdenesDeTrabajoPorClienteToolStripMenuItem.Text = "Procesar Ordenes de Trabajo por Cliente";
+            this.procesarOrdenesDeTrabajoPorClienteToolStripMenuItem.Click += new System.EventHandler(this.procesarOrdenesDeTrabajoPorClienteToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
@@ -207,12 +209,14 @@
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
             this.facturasToolStripMenuItem.Size = new System.Drawing.Size(359, 26);
             this.facturasToolStripMenuItem.Text = "Facturas";
+            this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
             // 
             // procesarFacturasPorClienteToolStripMenuItem
             // 
             this.procesarFacturasPorClienteToolStripMenuItem.Name = "procesarFacturasPorClienteToolStripMenuItem";
             this.procesarFacturasPorClienteToolStripMenuItem.Size = new System.Drawing.Size(359, 26);
             this.procesarFacturasPorClienteToolStripMenuItem.Text = "Procesar Facturas por Cliente";
+            this.procesarFacturasPorClienteToolStripMenuItem.Click += new System.EventHandler(this.procesarFacturasPorClienteToolStripMenuItem_Click);
             // 
             // almacenToolStripMenuItem
             // 
@@ -249,6 +253,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Administrador";
             this.Text = "Usuario Administrador";
+            this.Load += new System.EventHandler(this.Administrador_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

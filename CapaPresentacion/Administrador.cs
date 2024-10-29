@@ -60,5 +60,34 @@ namespace CapaPresentacion
             OrdenTrabajoAutorizacion OrdenAutorizacion = new OrdenTrabajoAutorizacion();
             OrdenAutorizacion.Show();
         }
+
+        private void ordenesDeTrabajoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrdenesTrabajo ordenesTrabajo = new OrdenesTrabajo();   
+            ordenesTrabajo.Show();
+         }
+
+        private void procesarOrdenesDeTrabajoPorClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProcesarOrdenTrabajoCliente ProcOrdenTC = new ProcesarOrdenTrabajoCliente();
+            ProcOrdenTC.Show();
+        }
+
+        private void Administrador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Facturas facturasV = new Facturas();
+            facturasV.Show();
+        }
+
+        private void procesarFacturasPorClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProcesamientodeFacturasporCliente procesarFacturaCliente = new ProcesamientodeFacturasporCliente();
+            procesarFacturaCliente.Show();
+        }
     }
 }

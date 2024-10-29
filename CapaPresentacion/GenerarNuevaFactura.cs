@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class BuscarporNdeRUC : Form
+    public partial class GenerarNuevaFactura : Form
     {
-        public BuscarporNdeRUC()
+        public GenerarNuevaFactura()
         {
             InitializeComponent();
         }
